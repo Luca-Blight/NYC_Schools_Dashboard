@@ -1,6 +1,0 @@
-streamlit
-autopep8
-altair
-pandas
-numpy
-plotly
