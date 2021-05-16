@@ -1,0 +1,8 @@
+flask
+python-dotenv
+requests
+simplejson
+pytest
+psycopg2
+sodapy
+

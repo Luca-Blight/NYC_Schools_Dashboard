@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1beta1
+# UPDATE THE API
+kind: Ingress
+metadata:
+  name: ingress-service
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    # tells kubernetes to create an ingress controller based on nginx project
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+    # allows for use of regex
+spec:
+    rules:
+        - host: schoolsy.com
+          http:
+              paths:
+              - path: /?(.*)
+                backend:
+                  serviceName: frontend-deployment-service
+                  servicePort: 8501
+              - path: /schools/?(.*)
+                backend:
+                  serviceName: api-deployment-service
+                  servicePort: 5000

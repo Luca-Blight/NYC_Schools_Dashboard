@@ -1,0 +1,1 @@
+from .settings import TEST_DB_HOST, TEST_DB_NAME,TEST_DB_PASSWORD,TEST_DB_USER
